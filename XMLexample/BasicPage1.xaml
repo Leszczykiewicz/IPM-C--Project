@@ -1,0 +1,69 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="XMLexample.BasicPage1"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:XMLexample"
+    xmlns:common="using:XMLexample.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">Średnie kursy walut</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="1116,30,0,0" VerticalAlignment="Top" Width="100" Tapped="exit"/>
+        </Grid>
+        <ListBox x:Name="listBox_srednie_kursy_walut" HorizontalAlignment="Left" Height="531" Margin="48,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="649" SelectionChanged="selection_changed">
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Margin="10">
+                    <Grid d:DesignHeight="50" Margin="0,5,0,0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="95"/>
+                                <ColumnDefinition Width="85"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding KodWaluty}" Grid.Column="1"/>
+                        <TextBlock Text="{Binding KursSredni}" Grid.Column="2"/>
+                    </Grid>
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="857,142,0,0" Grid.Row="1" VerticalAlignment="Top" Click="goToNewPage"/>
+    </Grid>
+</Page>

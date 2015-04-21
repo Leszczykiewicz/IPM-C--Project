@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LAB-E109</Machine>
+    <WindowsUser>student</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>017aa8da-912d-4ce5-9075-e7c401876596</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>79EBE17E675BA98C44F373E6B09D55D03317115878A305600D7AF3E1692665AF</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>017aa8da-912d-4ce5-9075-e7c401876596_1.0.0.0_neutral__ka23bv60pj736</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>017aa8da-912d-4ce5-9075-e7c401876596_ka23bv60pj736!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>017aa8da-912d-4ce5-9075-e7c401876596</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=rwajman</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-04-20T11:16:14.751</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\XMLexample.exe">
+      <PackagePath>XMLexample.exe</PackagePath>
+      <Modified>2015-04-20T11:33:08.326</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T03:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T03:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T03:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-07-23T03:01:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2014-11-13T10:28:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-04-20T10:13:32.828</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\BasicPage1.xbf">
+      <PackagePath>BasicPage1.xbf</PackagePath>
+      <Modified>2015-04-20T11:21:00.409</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-04-20T11:21:00.410</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\XMLexample.xr.xml">
+      <PackagePath>XMLexample.xr.xml</PackagePath>
+      <Modified>2015-04-20T11:15:54.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-04-20T11:16:14.629</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
