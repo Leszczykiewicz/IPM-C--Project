@@ -66,13 +66,12 @@
                     <StackPanel Margin="10">
                         <Grid d:DesignHeight="50" Margin="0,5,0,0" >
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="95"/>
+                                <ColumnDefinition Width="200"/>
                                 <ColumnDefinition Width="85"/>
-                                <ColumnDefinition Width="*"/>
+                           
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding NazwaKraju}" Grid.Column="0"/>
-                            <TextBlock Text="{Binding KodWaluty}" Grid.Column="1"/>
-                            <TextBlock Text="{Binding KursSredni}" Grid.Column="2"/>
+                            <TextBlock Text="{Binding KursSredni}" Grid.Column="1"/>
+                            <TextBlock Text="{Binding NazwaWaluty}" Grid.Column="0"/>
                         </Grid>
                     </StackPanel>
                 </DataTemplate>

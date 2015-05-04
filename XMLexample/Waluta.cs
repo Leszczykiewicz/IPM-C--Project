@@ -9,6 +9,7 @@ namespace XMLexample
     public class Waluta
     {
         string nazwa_kraju;
+        string nazwa_waluty;
         string przelicznik;
         string kod_waluty;
         string kurs_sredni;
@@ -34,5 +35,10 @@ namespace XMLexample
             set { kurs_sredni = value; }
         }
 
+        public string NazwaWaluty
+        {
+            get { return nazwa_waluty; }
+            set { nazwa_waluty = value; }
+        }
     }
 }

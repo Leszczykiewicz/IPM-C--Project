@@ -43,7 +43,7 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:ConnectionId='0' x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+            <TextBlock x:ConnectionId='4' x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"                                              />
             <AppBar>
                 <Grid>
@@ -55,24 +55,23 @@
                     <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
                 </Grid>
             </AppBar>
-            <AppBarButton x:ConnectionId='0' Grid.Column="1" HorizontalAlignment="Left" Label="Close" Margin="1104,27,0,0" VerticalAlignment="Top" Height="110" Width="134" Icon="ClosePane"               />
+            <AppBarButton x:ConnectionId='5' Grid.Column="1" HorizontalAlignment="Left" Label="Close" Margin="1104,27,0,0" VerticalAlignment="Top" Height="110" Width="134" Icon="ClosePane"               />
         </Grid>
-        <Button x:ConnectionId='0' x:Name="Button" Content="Pobierz dane" HorizontalAlignment="Left" Margin="41,19,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.075,0.474"                       />
-        <ListBox x:ConnectionId='0' x:Name="listBox_daty" HorizontalAlignment="Left" Height="496" Margin="44,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170"                                                 />
+        <Button x:ConnectionId='1' x:Name="Button" Content="Pobierz dane" HorizontalAlignment="Left" Margin="41,19,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.075,0.474"                       />
+        <ListBox x:ConnectionId='2' x:Name="listBox_daty" HorizontalAlignment="Left" Height="496" Margin="44,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170"                                                 />
         <TextBlock x:Name="myTextBlock" HorizontalAlignment="Left" Margin="238,63,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="13" Width="136" Grid.Row="1"/>
-        <ListBox x:ConnectionId='0' HorizontalAlignment="Left" Height="496" Margin="238,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="354" x:Name="listBox_waluty"                                     >
+        <ListBox x:ConnectionId='3' HorizontalAlignment="Left" Height="496" Margin="238,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="354" x:Name="listBox_waluty"                                     >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10">
                         <Grid d:DesignHeight="50" Margin="0,5,0,0" >
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="95"/>
+                                <ColumnDefinition Width="200"/>
                                 <ColumnDefinition Width="85"/>
-                                <ColumnDefinition Width="*"/>
+                           
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{Binding NazwaKraju}" Grid.Column="0"/>
-                            <TextBlock Text="{Binding KodWaluty}" Grid.Column="1"/>
-                            <TextBlock Text="{Binding KursSredni}" Grid.Column="2"/>
+                            <TextBlock Text="{Binding KursSredni}" Grid.Column="1"/>
+                            <TextBlock Text="{Binding NazwaWaluty}" Grid.Column="0"/>
                         </Grid>
                     </StackPanel>
                 </DataTemplate>

@@ -1,5 +1,7 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
     <LocalAssembly PathName="c:\users\student\downloads\04 - xmlexamplewithformateddatesofcurrency\04 - xmlexamplewithformateddatesofcurrency\xmlexample\obj\debug\intermediatexaml\xmlexample.exe" HashGuid="9f0d17d1-45d9-559b-464d-d3a7232573cf" />
+    <ReferenceAssembly PathName="c:\users\student\desktop\nowy folder\ipm-c--project\packages\winrtxamltoolkit.controls.datavisualization.1.6.1.3\lib\netcore451\winrtxamltoolkit.controls.datavisualization.dll" HashGuid="be684ae2-5628-42c1-f25a-53d124102458" />
+    <ReferenceAssembly PathName="c:\users\student\desktop\nowy folder\ipm-c--project\packages\winrtxamltoolkit.1.6.1.3\lib\netcore451\winrtxamltoolkit.dll" HashGuid="a4cdc2c2-a01c-5ec1-da22-75d5d070a5d3" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

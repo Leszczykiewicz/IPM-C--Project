@@ -1,1 +1,1 @@
-C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\XMLexample.csproj;neutral
+C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\XMLexample.csproj;neutral

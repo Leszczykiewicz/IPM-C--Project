@@ -1,69 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>AGA</Machine>
-    <WindowsUser>Leszczykiewicz</WindowsUser>
+    <Machine>LAB-E109</Machine>
+    <WindowsUser>student</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>017aa8da-912d-4ce5-9075-e7c401876596</PackageIdentityName>
-    <RegisteredManifestChecksum>79B0228C81C4BE0FD8DEF4D4058AD8D31595D0D17794CB373E90998F80DDCF06</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>79EBE17E675BA98C44F373E6B09D55D03317115878A305600D7AF3E1692665AF</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>017aa8da-912d-4ce5-9075-e7c401876596_1.0.0.0_neutral__ka23bv60pj736</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>017aa8da-912d-4ce5-9075-e7c401876596_ka23bv60pj736!App</RegisteredUserModeAppID>
     <RegisteredPackageID>017aa8da-912d-4ce5-9075-e7c401876596</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=rwajman</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-23T04:24:07.464</Modified>
+      <Modified>2015-05-04T10:07:37.093</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.exe">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.exe">
       <PackagePath>XMLexample.exe</PackagePath>
-      <Modified>2015-04-23T05:11:28.293</Modified>
+      <Modified>2015-05-04T10:56:02.354</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-21T20:22:53.672</Modified>
+      <Modified>2015-05-04T10:05:57.633</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-21T20:22:53.692</Modified>
+      <Modified>2015-05-04T10:05:57.634</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-21T20:22:53.696</Modified>
+      <Modified>2015-05-04T10:05:57.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-04-21T20:22:53.699</Modified>
+      <Modified>2015-05-04T10:05:57.638</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\Common\ReadMe.txt">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\Common\ReadMe.txt">
       <PackagePath>Common\ReadMe.txt</PackagePath>
-      <Modified>2015-04-21T20:22:53.833</Modified>
+      <Modified>2015-05-04T10:05:57.652</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-04-21T20:22:54.706</Modified>
+      <Modified>2015-05-04T10:07:32.028</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\BasicPage1.xbf">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\BasicPage1.xbf">
       <PackagePath>BasicPage1.xbf</PackagePath>
-      <Modified>2015-04-23T05:11:27.540</Modified>
+      <Modified>2015-05-04T10:07:32.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-04-23T05:11:27.542</Modified>
+      <Modified>2015-05-04T10:46:04.447</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.xr.xml">
+      <PackagePath>XMLexample.xr.xml</PackagePath>
+      <Modified>2015-05-04T10:43:09.871</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-04-23T04:24:03.639</Modified>
+      <Modified>2015-05-04T10:07:34.120</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

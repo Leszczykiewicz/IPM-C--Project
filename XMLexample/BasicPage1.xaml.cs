@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Xml.Linq;
+using WinRTXamlToolkit.Controls.DataVisualization.Charting;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -56,8 +57,10 @@ namespace XMLexample
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
             ProccedWithXML("http://www.nbp.pl/kursy/xml/LastA.xml");
-            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002));
-            endDatePicker.MaxYear = new DateTimeOffset(new DateTime(2012));
+            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,01,01));
+            startDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
+            endDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,01,01));
+            endDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
 
         }
 
@@ -154,6 +157,11 @@ namespace XMLexample
         private void close(object sender, TappedRoutedEventArgs e)
         {
             Application.Current.Exit();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (LineChart.Series[0] as LineSeries).ItemsSource = new List<Waluta;
         }
 
       
