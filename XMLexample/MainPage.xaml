@@ -45,11 +45,22 @@
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
                         IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40" SelectionChanged="pageTitle_SelectionChanged"/>
+            <AppBar>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal"/>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+                </Grid>
+            </AppBar>
+            <AppBarButton Grid.Column="1" HorizontalAlignment="Left" Label="Close" Margin="1104,27,0,0" VerticalAlignment="Top" Height="110" Width="134" Icon="ClosePane" Tapped="close"/>
         </Grid>
         <Button x:Name="Button" Content="Pobierz dane" HorizontalAlignment="Left" Margin="41,19,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.075,0.474" Click="Button_Click_1"/>
         <ListBox x:Name="listBox_daty" HorizontalAlignment="Left" Height="496" Margin="44,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" SelectionChanged="listBox_daty_SelectionChanged"/>
         <TextBlock x:Name="myTextBlock" HorizontalAlignment="Left" Margin="238,63,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="13" Width="136" Grid.Row="1"/>
-        <ListBox HorizontalAlignment="Left" Height="496" Margin="238,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="354" x:Name="listBox_waluty">
+        <ListBox HorizontalAlignment="Left" Height="496" Margin="238,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="354" x:Name="listBox_waluty" SelectionChanged="selection_changed">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="10">

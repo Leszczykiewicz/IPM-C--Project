@@ -56,6 +56,8 @@ namespace XMLexample
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
             ProccedWithXML("http://www.nbp.pl/kursy/xml/LastA.xml");
+            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002));
+            endDatePicker.MaxYear = new DateTimeOffset(new DateTime(2012));
 
         }
 
@@ -114,11 +116,14 @@ namespace XMLexample
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedTo(e);
+            Waluta currency = e.Parameter as Waluta;
+            pageTitle.Text = "Historia kursu " + currency.KodWaluty;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedFrom(e);
+           
         }
 
         #endregion
@@ -143,5 +148,15 @@ namespace XMLexample
                 this.Frame.Navigate(typeof(MainPage), e.AddedItems[0]);
             }
         }
+
+     
+
+        private void close(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+      
+     
     }
 }

@@ -55,6 +55,7 @@ namespace XMLexample
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
+            ProccedWithXML("http://www.nbp.pl/kursy/xml/LastA.xml");
             
         }
 
@@ -99,8 +100,8 @@ namespace XMLexample
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedTo(e);
-            currency = e.Parameter as Waluta;
-            pageTitle.Text = "Historia kursu " + currency.KodWaluty;
+//            currency = e.Parameter as Waluta;
+//            pageTitle.Text = "Historia kursu " + currency.KodWaluty;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -184,6 +185,19 @@ namespace XMLexample
         private void pageTitle_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void selection_changed(object sender, SelectionChangedEventArgs e)
+        {
+            if (this.Frame != null)
+            {
+                this.Frame.Navigate(typeof(BasicPage1), e.AddedItems[0]);
+            }
+        }
+
+        private void close(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
     }
 }

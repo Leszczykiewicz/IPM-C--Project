@@ -44,27 +44,44 @@
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
             <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
-            <Image x:ConnectionId='3' Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="1116,30,0,0" VerticalAlignment="Top" Width="100"              />
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="5,0,25,-20" Height="100"/>
+            <Image x:ConnectionId='0' Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="1116,30,0,0" VerticalAlignment="Top" Width="100"              />
+            <AppBar>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal"/>
+                    <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal"/>
+                </Grid>
+            </AppBar>
         </Grid>
-        <ListBox x:ConnectionId='1' x:Name="listBox_srednie_kursy_walut" HorizontalAlignment="Left" Height="531" Margin="48,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="649"                                     >
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Margin="10">
-                    <Grid d:DesignHeight="50" Margin="0,5,0,0" >
+        <ListBox x:ConnectionId='0' x:Name="listBox_srednie_kursy_walut" HorizontalAlignment="Left" Height="389" Margin="101,193,0,0" Grid.Row="1" VerticalAlignment="Top" Width="592"                                     >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="10">
+                        <Grid d:DesignHeight="50" Margin="0,5,0,0" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="95"/>
                                 <ColumnDefinition Width="85"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{Binding KodWaluty}" Grid.Column="1"/>
-                        <TextBlock Text="{Binding KursSredni}" Grid.Column="2"/>
-                    </Grid>
-                </StackPanel>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
+                            <TextBlock Text="{Binding KursSredni}" Grid.Column="2"/>
+                        </Grid>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:ConnectionId='2' Content="Button" HorizontalAlignment="Left" Margin="857,142,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
+        <Button x:ConnectionId='0' Content="Zapisz wykres do pliku" HorizontalAlignment="Left" Margin="729,403,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
+        <AppBarButton x:ConnectionId='0' HorizontalAlignment="Left" Label="Close" Margin="1203,38,0,-30" VerticalAlignment="Top"                Icon="ClosePane" Height="132" Width="115"/>
+        <DatePicker x:Name="startDatePicker" HorizontalAlignment="Left" Margin="255,52,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="255,136,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,34,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Data poczatkowa wyświetlania" VerticalAlignment="Top" Height="50" Width="234"  FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="41,123,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Data koncowa wyświetlania" VerticalAlignment="Top" Height="45" Width="234" FontSize="20"/>
+        <ProgressBar HorizontalAlignment="Left" Height="16" Margin="600,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="257"/>
+        <Button Content="Rysuj wykres" HorizontalAlignment="Left" Margin="677,85,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Page>
 

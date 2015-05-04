@@ -35,3 +35,39 @@ C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLex
 C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\obj\Debug\BasicPage1.g.cs
 C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\obj\Debug\BasicPage1.xaml
 C:\Users\student\Downloads\04 - XMLexampleWithFormatedDatesOfCurrency\04 - XMLexampleWithFormatedDatesOfCurrency\XMLexample\obj\Debug\BasicPage1.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\App.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\BasicPage1.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\MainPage.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.exe
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.pdb
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\resources.pri
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\AppxManifest.xml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\bin\Debug\XMLexample.build.appxrecipe
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\App.g.i.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\App.g.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\BasicPage1.g.i.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\BasicPage1.g.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\MainPage.g.i.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\MainPage.g.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\App.xaml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\BasicPage1.xaml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\MainPage.xaml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\App.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\BasicPage1.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\MainPage.xbf
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\XMLexample.exe
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\XMLexample.pdb
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\priconfig.xml
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\priconfig.xml.intermediate
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\layout.resfiles
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\layout.resfiles.intermediate
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\resources.resfiles
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\resources.resfiles.intermediate
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\pri.resfiles
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\pri.resfiles.intermediate
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\qualifiers.txt
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Leszczykiewicz\Desktop\Nowy folder\IPM-C--Project\XMLexample\obj\Debug\ProjectArchitectures.txt
