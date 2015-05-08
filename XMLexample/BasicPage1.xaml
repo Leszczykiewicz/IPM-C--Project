@@ -67,7 +67,7 @@
         <ProgressBar HorizontalAlignment="Left" Height="16" Margin="600,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="257"/>
         <Button Content="Rysuj wykres" HorizontalAlignment="Left" Margin="677,85,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
         <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,218,0,0" Width="600" Height="400" Grid.Row="1">
-            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Name" DependentValuePath="Amount" IsSelectionEnabled="True"/>
+            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Date" DependentValuePath="Value" IsSelectionEnabled="True"/>
         </Charting:Chart>
     </Grid>
 </Page>

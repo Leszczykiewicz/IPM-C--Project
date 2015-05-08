@@ -56,8 +56,7 @@ namespace XMLexample
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
-            ProccedWithXML("http://www.nbp.pl/kursy/xml/LastA.xml");
-            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,01,01));
+            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,05,01));
             startDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
             endDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,01,01));
             endDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
@@ -68,15 +67,23 @@ namespace XMLexample
         private void ProccedWithXML(String xml_url)
         {
             XDocument loadedXML = XDocument.Load(xml_url);
-           // myTextBlock.Text = "Data publikacji: " + (string)loadedXML.Descendants("tabela_kursow").ElementAt(0).Element("data_publikacji");
+   
             var data = from query in loadedXML.Descendants("pozycja")
                        select new Waluta
                        {
-                           KodWaluty = (string)query.Element("kod_waluty"),
-                           KursSredni = (string)query.Element("kurs_sredni")
+                           KursSredni = (string)query.Element("kurs_sredni"),
+                           NazwaWaluty = ((string)query.Element("nazwa_waluty")) == null ? (string)query.Element("nazwa_kraju") : (string)query.Element("nazwa_waluty"),
+                           KodWaluty = (string)query.Element("kod_waluty")
                        };
-            listBox_srednie_kursy_walut.ItemsSource = data;
+            System.Diagnostics.Debug.WriteLine(data.ElementAt(0).KodWaluty);
+
         }
+
+        
+
+     
+
+       
 
         /// <summary>
         /// Populates the page with content passed during navigation. Any saved state is also
@@ -161,7 +168,15 @@ namespace XMLexample
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            (LineChart.Series[0] as LineSeries).ItemsSource = new List<Waluta;
+            System.Diagnostics.Debug.WriteLine(MainPage.datesList.ElementAt(0));
+            System.Diagnostics.Debug.WriteLine(startDatePicker.Date.ToString("yyyy-MM-dd"));
+            String startDate = startDatePicker.Date.ToString("yyyy-MM-dd");
+            String endDate = endDatePicker.Date.ToString("yyyy-MM-dd");
+            List<DataToChart> listToChart = new List<DataToChart>(); 
+            listToChart.Add(new DataToChart(DateTime.Today, 8.7 ));
+            listToChart.Add(new DataToChart(new DateTime(2015,5,5), 8.9 ));
+            listToChart.Add(new DataToChart(new DateTime(2015,5,6), 10.6 ));
+            (LineChart.Series[0] as LineSeries).ItemsSource = listToChart;
         }
 
       

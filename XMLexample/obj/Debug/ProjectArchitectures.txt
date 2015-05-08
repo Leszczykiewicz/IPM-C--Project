@@ -1,1 +1,1 @@
-C:\Users\student\Desktop\Nowy folder\IPM-C--Project\XMLexample\XMLexample.csproj;neutral
+C:\Users\Aga\Desktop\Aga\IPM-C--Project\XMLexample\XMLexample.csproj;neutral

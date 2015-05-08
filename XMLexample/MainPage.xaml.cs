@@ -29,6 +29,7 @@ namespace XMLexample
         private Waluta currency; //nazwa waluty
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        public static List<String> datesList = new List<String>();
 
         /// <summary>
         /// This can be changed to a strongly typed view model.
@@ -135,6 +136,7 @@ namespace XMLexample
                 //ProccedWithXML4(xml_url);
                 //listBox_daty.Items.Add(ProccedWithXML4Date(xml_url));
                 listBox_daty.Items.Add("20" + splitted[s].Substring(5, 2) + "-" + splitted[s].Substring(7, 2) + "-" + splitted[s].Substring(9,2));
+                datesList.Add("20" + splitted[s].Substring(5, 2) + "-" + splitted[s].Substring(7, 2) + "-" + splitted[s].Substring(9, 2));
             }
         }
 
@@ -173,6 +175,7 @@ namespace XMLexample
             tmpS = tmpS.Substring(2,2)+tmpS.Substring(5,2)+tmpS.Substring(8,2);
             foreach (string ss in splitted)
             {
+                System.Diagnostics.Debug.WriteLine("ss: "+ss); 
                 if (!ss.Substring(0, 1).Equals("a"))
                     continue;
                 if (ss.Substring(5,6).Equals(tmpS)) //a002z020103
