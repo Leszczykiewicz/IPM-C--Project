@@ -58,16 +58,16 @@
                 </Grid>
             </AppBar>
         </Grid>
-        <Button x:ConnectionId='1' Content="Zapisz wykres do pliku" HorizontalAlignment="Left" Margin="729,403,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
+        <Button x:ConnectionId='1' Content="Zapisz wykres do pliku" HorizontalAlignment="Left" Margin="1026,85,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
         <AppBarButton x:ConnectionId='2' HorizontalAlignment="Left" Label="Close" Margin="1203,38,0,-30" VerticalAlignment="Top"                Icon="ClosePane" Height="132" Width="115"/>
         <DatePicker x:Name="startDatePicker" HorizontalAlignment="Left" Margin="255,52,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="255,136,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="41,34,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Data poczatkowa wyświetlania" VerticalAlignment="Top" Height="50" Width="234"  FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="41,123,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Data koncowa wyświetlania" VerticalAlignment="Top" Height="45" Width="234" FontSize="20"/>
-        <ProgressBar HorizontalAlignment="Left" Height="16" Margin="600,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="257"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="16" Margin="600,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="257"/>
         <Button x:ConnectionId='3' Content="Rysuj wykres" HorizontalAlignment="Left" Margin="677,85,0,0" Grid.Row="1" VerticalAlignment="Top"                     />
-        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,218,0,0" Width="600" Height="400" Grid.Row="1">
-            <Charting:LineSeries Title="Smartphone Companies" Margin="0" IndependentValuePath="Date" DependentValuePath="Value" IsSelectionEnabled="True"/>
+        <Charting:Chart x:Name="LineChart" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,218,0,0" Width="1214" Height="400" Grid.Row="1">
+            <Charting:LineSeries Title="Kurs waluty" Margin="0" IndependentValuePath="Date" DependentValuePath="Value" IsSelectionEnabled="True"/>
         </Charting:Chart>
     </Grid>
 </Page>

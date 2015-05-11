@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Xml.Linq;
 using WinRTXamlToolkit.Controls.DataVisualization.Charting;
+using System.Text;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -48,7 +49,7 @@ namespace XMLexample
             get { return this.navigationHelper; }
         }
 
-
+        private Waluta currency;
         public BasicPage1()
         {
             this.InitializeComponent();
@@ -56,26 +57,10 @@ namespace XMLexample
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             this.navigationHelper.SaveState += navigationHelper_SaveState;
 
-            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,05,01));
+            startDatePicker.MinYear = new DateTimeOffset(new DateTime(2002, 05, 01));
             startDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
-            endDatePicker.MinYear = new DateTimeOffset(new DateTime(2002,01,01));
+            endDatePicker.MinYear = new DateTimeOffset(new DateTime(2002, 01, 01));
             endDatePicker.MaxYear = new DateTimeOffset(DateTime.Today);
-
-        }
-
-
-        private void ProccedWithXML(String xml_url)
-        {
-            XDocument loadedXML = XDocument.Load(xml_url);
-   
-            var data = from query in loadedXML.Descendants("pozycja")
-                       select new Waluta
-                       {
-                           KursSredni = (string)query.Element("kurs_sredni"),
-                           NazwaWaluty = ((string)query.Element("nazwa_waluty")) == null ? (string)query.Element("nazwa_kraju") : (string)query.Element("nazwa_waluty"),
-                           KodWaluty = (string)query.Element("kod_waluty")
-                       };
-            System.Diagnostics.Debug.WriteLine(data.ElementAt(0).KodWaluty);
 
         }
 
@@ -122,11 +107,11 @@ namespace XMLexample
         /// and <see cref="GridCS.Common.NavigationHelper.SaveState"/>.
         /// The navigation parameter is available in the LoadState method 
         /// in addition to page state preserved during an earlier session.
-
+        
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             navigationHelper.OnNavigatedTo(e);
-            Waluta currency = e.Parameter as Waluta;
+            currency = e.Parameter as Waluta;
             pageTitle.Text = "Historia kursu " + currency.KodWaluty;
         }
 
@@ -166,16 +151,73 @@ namespace XMLexample
             Application.Current.Exit();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private  double ProccedWithXML(String xml_url, String kod_waluty)
         {
-            System.Diagnostics.Debug.WriteLine(MainPage.datesList.ElementAt(0));
-            System.Diagnostics.Debug.WriteLine(startDatePicker.Date.ToString("yyyy-MM-dd"));
+            XDocument loadedXML = XDocument.Load(xml_url);
+           
+            var data = from query in loadedXML.Descendants("pozycja")
+                       select new Waluta
+                       {
+                           KursSredni = (string)query.Element("kurs_sredni"),
+                           KodWaluty = (string) query.Element("kod_waluty")
+                       };
+            
+            foreach(Waluta waluta in data)
+            {
+                if(waluta.KodWaluty.Equals(kod_waluty))
+                {
+                    StringBuilder S = new StringBuilder(waluta.KursSredni);
+                    S.Replace(",", ".");
+                    string s = S.ToString();
+                    return Convert.ToDouble(s);
+                }
+            }
+
+            return 0;
+
+        }
+
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            List<String> list = new List<String>();
             String startDate = startDatePicker.Date.ToString("yyyy-MM-dd");
             String endDate = endDatePicker.Date.ToString("yyyy-MM-dd");
+            String tmpStart = startDate.Substring(2, 2) + startDate.Substring(5, 2) + startDate.Substring(8, 2);
+            String tmpEnd = endDate.Substring(2, 2) + endDate.Substring(5, 2) + endDate.Substring(8, 2);
+            foreach (string ss in MainPage.splitted)
+            {
+                if (ss.Length==0 || !ss.Substring(0, 1).Equals("a"))
+                    continue;
+                if (Convert.ToInt32(ss.Substring(5, 6)) > Convert.ToInt32(tmpStart) && Convert.ToInt32(ss.Substring(5, 6)) < Convert.ToInt32(tmpEnd)) //a002z020103
+                {
+                    list.Add(ss);
+                    System.Diagnostics.Debug.WriteLine(ss);
+                   
+                }
+            }
+           
+
+
+          //  System.Diagnostics.Debug.WriteLine(MainPage.datesList.ElementAt(0));
+          //  System.Diagnostics.Debug.WriteLine(startDatePicker.Date.ToString("yyyy-MM-dd"));
             List<DataToChart> listToChart = new List<DataToChart>(); 
-            listToChart.Add(new DataToChart(DateTime.Today, 8.7 ));
-            listToChart.Add(new DataToChart(new DateTime(2015,5,5), 8.9 ));
-            listToChart.Add(new DataToChart(new DateTime(2015,5,6), 10.6 ));
+            foreach (string l in list)
+            {
+                progressBar.Value += 100.0 / list.Capacity;
+                System.Diagnostics.Debug.WriteLine(list.Capacity);
+                System.Diagnostics.Debug.WriteLine("progress: "+progressBar.Value);
+                DateTime date = new DateTime(Convert.ToInt32("20" + l.Substring(5, 2)), Convert.ToInt32(l.Substring(7, 2)), Convert.ToInt32(l.Substring(9, 2)));
+                double value =  ProccedWithXML(@"http://www.nbp.pl/kursy/xml/" + l + @".xml", currency.KodWaluty);
+         //       System.Diagnostics.Debug.WriteLine("wartosc: " +value);
+                listToChart.Add(new DataToChart(date,value));
+
+            }
+        
+         //   listToChart.Add(new DataToChart(DateTime.Today, 8.7 ));
+         //   listToChart.Add(new DataToChart(new DateTime(2015,5,5), 8.9 ));
+         //   listToChart.Add(new DataToChart(new DateTime(2015,5,6), 10.6 ));
             (LineChart.Series[0] as LineSeries).ItemsSource = listToChart;
         }
 

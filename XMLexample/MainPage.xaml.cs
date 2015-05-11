@@ -115,7 +115,7 @@ namespace XMLexample
 
 
         String responseBody;
-        String[] splitted;
+        public static String[] splitted;
         private async Task GetDates()
         {
             HttpClient client = new HttpClient();
