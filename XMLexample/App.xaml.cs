@@ -57,6 +57,7 @@ namespace XMLexample
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
+              //  XMLexample.Common.SuspensionManager.RegisterFrame(rootFrame, "appFrame");
                 // Set the default language
                 rootFrame.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
 
@@ -99,9 +100,10 @@ namespace XMLexample
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+        private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
+         //   await XMLexample.Common.SuspensionManager.SaveAsync();
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }

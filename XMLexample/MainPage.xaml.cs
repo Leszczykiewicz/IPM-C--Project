@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 
 namespace XMLexample
 {
+    
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
@@ -51,6 +52,7 @@ namespace XMLexample
 
         public MainPage()
         {
+
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;
@@ -158,7 +160,7 @@ namespace XMLexample
                            KodWaluty = (string)query.Element("kod_waluty")
                        };
             listBox_waluty.ItemsSource = data;
-            System.Diagnostics.Debug.WriteLine(data.ElementAt(0).KodWaluty); 
+            System.Diagnostics.Debug.WriteLine(data.ElementAt(0).KodWaluty);  
            
         }
 

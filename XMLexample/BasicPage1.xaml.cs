@@ -18,6 +18,12 @@ using System.Net.Http;
 using System.Xml.Linq;
 using WinRTXamlToolkit.Controls.DataVisualization.Charting;
 using System.Text;
+using Windows.Storage;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.Graphics.Imaging;
+using Windows.System.Threading;
+using Windows.ApplicationModel.Core;
+using Windows.UI.Core;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -179,8 +185,9 @@ namespace XMLexample
         }
 
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
+            progressBar.Value = 0;
             List<String> list = new List<String>();
             String startDate = startDatePicker.Date.ToString("yyyy-MM-dd");
             String endDate = endDatePicker.Date.ToString("yyyy-MM-dd");
@@ -194,6 +201,7 @@ namespace XMLexample
                 {
                     list.Add(ss);
                     System.Diagnostics.Debug.WriteLine(ss);
+                    Refresh(list);
                    
                 }
             }
@@ -202,10 +210,13 @@ namespace XMLexample
 
           //  System.Diagnostics.Debug.WriteLine(MainPage.datesList.ElementAt(0));
           //  System.Diagnostics.Debug.WriteLine(startDatePicker.Date.ToString("yyyy-MM-dd"));
-            List<DataToChart> listToChart = new List<DataToChart>(); 
+            List<DataToChart> listToChart = new List<DataToChart>();
+           // progressBar.Maximum = list.Capacity;
+            
             foreach (string l in list)
             {
-                progressBar.Value += 100.0 / list.Capacity;
+            
+                
                 System.Diagnostics.Debug.WriteLine(list.Capacity);
                 System.Diagnostics.Debug.WriteLine("progress: "+progressBar.Value);
                 DateTime date = new DateTime(Convert.ToInt32("20" + l.Substring(5, 2)), Convert.ToInt32(l.Substring(7, 2)), Convert.ToInt32(l.Substring(9, 2)));
@@ -220,6 +231,56 @@ namespace XMLexample
          //   listToChart.Add(new DataToChart(new DateTime(2015,5,6), 10.6 ));
             (LineChart.Series[0] as LineSeries).ItemsSource = listToChart;
         }
+
+        private  void Refresh(List<String> list)
+        {
+
+            IAsyncAction m_workItem = ThreadPool.RunAsync((workItem) =>
+            {
+                
+                    CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
+                        CoreDispatcherPriority.High, new DispatchedHandler(() =>
+                        {
+                            progressBar.Value += 100.0 / list.Count;   
+                        }));
+                
+            });
+            
+        }
+
+        private async void generatePDF(object sender, RoutedEventArgs e)
+        {
+            
+            WriteableBitmap wb = await WinRTXamlToolkit.Composition.WriteableBitmapRenderExtensions.Render(LineChart);
+            Windows.Storage.Pickers.FileSavePicker savePicker = new Windows.Storage.Pickers.FileSavePicker();
+            savePicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            savePicker.FileTypeChoices.Add("JPG file", new List<string>() { ".png" });
+            Windows.Storage.StorageFile file = await savePicker.PickSaveFileAsync();
+            Stream stream = wb.PixelBuffer.AsStream();
+            byte[] pixels = new byte[(uint)stream.Length];
+            await stream.ReadAsync(pixels, 0, pixels.Length);
+
+            using (var writeStream = await file.OpenAsync(FileAccessMode.ReadWrite))
+            {
+                var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, writeStream);
+                encoder.SetPixelData(
+                    BitmapPixelFormat.Bgra8,
+                    BitmapAlphaMode.Premultiplied,
+                    (uint)wb.PixelWidth,
+                    (uint)wb.PixelHeight,
+                    96,
+                    96,
+                    pixels);
+                await encoder.FlushAsync();
+
+                using (var outputStream = writeStream.GetOutputStreamAt(0))
+                {
+                    await outputStream.FlushAsync();
+                }
+            };  
+        }
+
+
 
       
      

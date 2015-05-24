@@ -58,7 +58,7 @@
                 </Grid>
             </AppBar>
         </Grid>
-        <Button x:ConnectionId='1' Content="Zapisz wykres do pliku" HorizontalAlignment="Left" Margin="1026,85,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
+        <Button x:ConnectionId='1' Content="Zapisz wykres do pliku" HorizontalAlignment="Left" Margin="647,27,0,0" Grid.Row="1" VerticalAlignment="Top"                    />
         <AppBarButton x:ConnectionId='2' HorizontalAlignment="Left" Label="Close" Margin="1203,38,0,-30" VerticalAlignment="Top"                Icon="ClosePane" Height="132" Width="115"/>
         <DatePicker x:Name="startDatePicker" HorizontalAlignment="Left" Margin="255,52,0,0" Grid.Row="1" VerticalAlignment="Top"/>
         <DatePicker x:Name="endDatePicker" HorizontalAlignment="Left" Margin="255,136,0,0" Grid.Row="1" VerticalAlignment="Top"/>
